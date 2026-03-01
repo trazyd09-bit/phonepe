@@ -1,6 +1,6 @@
 const CACHE_NAME = 'tx-cache-v1';
 const urlsToCache = [
-  '/History.html',
+  '/index.html',
   '/pradeepkumaryadav.html',
   '/nandyalaasatish.html',
   '/Vaibhavlad.html',
@@ -14,4 +14,5 @@ self.addEventListener('install', event => {
 
 self.addEventListener('fetch', event => {
   event.respondWith(caches.match(event.request).then(response => response || fetch(event.request)));
+
 });
