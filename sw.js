@@ -1,6 +1,10 @@
 const CACHE_NAME = 'tx-cache-v1';
 const urlsToCache = [
   '/index.html',
+  '/Afidabibi.html',
+  '/Albydavis.html',
+  '/Ganeshraikwar(2)',
+  '/Ganeshraikwar.html',
   '/pradeepkumaryadav.html',
   '/nandyalaasatish.html',
   '/Vaibhavlad.html',
@@ -16,3 +20,4 @@ self.addEventListener('fetch', event => {
   event.respondWith(caches.match(event.request).then(response => response || fetch(event.request)));
 
 });
+
